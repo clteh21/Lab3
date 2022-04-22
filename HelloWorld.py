@@ -1,2 +1,2 @@
 print("ET0735 - DevOps")
-print("ur mom gay")
+print("y r u running")
