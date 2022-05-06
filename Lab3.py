@@ -49,8 +49,8 @@ def bubble_sort(arr, sorting_order):
     return arr_result
 
 def main():
-    # Driver code to test above
-    arr = [64, 34, 25, 12, 22, 11, 90, 55, 66, 77]
+
+    arr = get_user_input()
 
     # Sort in ascending order
     result = bubble_sort(arr, SORT_ASCENDING)
@@ -61,6 +61,37 @@ def main():
     print("Sorted array in ascending order: ")
     result = bubble_sort(arr, SORT_DESCENDING)
     print(result)
+
+    print("The average value: ")
+    result = calc_average(arr)
+    print(result)
+
+def get_user_input():
+    array = []
+
+    # number of elements as input
+    n = int(input("Enter number of elements : "))
+
+    # iterating till the range
+    for i in range(0, n):
+        list = input()
+        array.append(list)
+
+    return array
+
+def calc_average(arr):
+    # Copy input list to results list
+    arr_result = arr.copy()
+
+    # Get number of elements in the list
+    n = len(arr_result)
+    p = 0
+
+    for i in range(n):
+        p = p + arr[i]
+        average = p/n
+
+    return average
 
 if __name__ == "__main__":
     main()
